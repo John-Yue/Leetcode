@@ -1,0 +1,25 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "面试题记录",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/John-Yue/Leetcode.git"
+  },
+  "keywords": [
+    "interview"
+  ],
+  "author": "John Yue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/John-Yue/Leetcode/issues"
+  },
+  "homepage": "https://github.com/John-Yue/Leetcode#readme",
+  "devDependencies": {
+    "eslint": "^8.39.0"
+  }
+}
