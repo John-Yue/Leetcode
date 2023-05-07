@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "面试题记录",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/John-Yue/Leetcode#readme",
   "devDependencies": {
-    "eslint": "^8.39.0"
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
+    "eslint": "^8.39.0",
+    "jest": "^29.5.0"
   }
 }
