@@ -38,6 +38,23 @@
         content: "...";
         background: linear-gradient(to right, transparent, #fff 50%);
       }
+      body {
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .box > span {
+        border: 1px solid red;
+        display: flex;
+      }
     </style>
   </head>
   <body>
@@ -45,6 +62,12 @@
       文本溢出 呈现小圆点;文本溢出 呈现小圆点;文本溢出 呈现小圆点;文本溢出
       呈现小圆点;文本溢出 呈现小圆点;文本溢出 呈现小圆点;
     </p>
+    <div class="box">
+      <span>
+        文本溢出 呈现小圆点;文本溢出 呈现小圆点;文本溢出 呈现小圆点;文本溢出
+        呈现小圆点;文本溢出 呈现小圆点;文本溢出 呈现小圆点; 我就试试</span
+      >
+    </div>
     <!-- <script type="module" src="./Throttle/throttle.js"></script> -->
     <!-- <script type="module" src="./Debounce/debounce.js"></script></script> -->
     <script type="module" src="./Promise/promise.js"></script>
