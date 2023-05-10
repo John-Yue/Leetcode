@@ -20,6 +20,10 @@
 //   // 在实力化Promise对象的时候，就会执行(resolve, reject) => {} ,
 //   // Promise中的resolve和reject函数是改变Promise对象状态的函数。
 //   // 没有resolve和reject执行，Promise对象的状态一直是`pending`.
+//   // 如果一直是pending状态的话，then是不会执行的
+//
+//   // resolve和reject执行，是保存状态，等执行微任务队列的时候，判断
+//   // resolve和reject有没有执行，如果状态变成了，执行then
 //   const p1 = new Promise((resolve, reject) => {
 //     console.log("p1");
 //   });
