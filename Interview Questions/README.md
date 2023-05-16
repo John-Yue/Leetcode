@@ -17,6 +17,8 @@
 
 ## React 相关
 
+- Redux 原理和实现
+- React router 原理 和实际开发需要注意的点
 - React17 更新了哪些内容
 - React fiber
 - redux 的原理
@@ -31,3 +33,11 @@
   6. 封装的组件必须具有高性能、低耦合的特性
 
 - 组件数据和 UI 怎么分离
+
+## 前端工程化和构建打包工具
+
+- webpack 原理、优化、应用
+
+### 拼多多前端面试题
+
+- promise.all 、race

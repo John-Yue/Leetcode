@@ -1,6 +1,6 @@
 // 使用WeakMap，可以使得在下一次垃圾回收机制执行的时候，释放这块儿内存
 function deepClone(target, map = new WeakMap()) {
-  if (typeof target === "object") {
+  if (typeof target === "object" && typeof target === null) {
     // 兼容数组类型
     let cloneTarget = Array.isArray(target) ? [] : {};
 

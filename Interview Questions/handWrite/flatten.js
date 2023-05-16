@@ -25,3 +25,28 @@ function flat(arr, d = 0) {
 
 const arr = [1, [2, [3, 4]]];
 console.log(flatten(arr, 1));
+
+// function flat(arr, d = 0) {
+//   return d > 0
+//     ? arr.reduce(
+//         (prev, cur) => prev.concat(Array.isArray(cur) ? flat(cur, d - 1) : cur),
+//         []
+//       )
+//     : arr.slice();
+// }
+
+function _flat(arr, d = 0) {
+  const result = [];
+  (function __flat(arr, d) {
+    for (let item of arr) {
+      if (Array.isArray(item) && d > 0) {
+        __flat(item, d - 1);
+      } else {
+        result.push(item);
+      }
+    }
+  })(arr, d);
+  return result;
+}
+
+console.log(_flat(arr, 1));

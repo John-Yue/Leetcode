@@ -96,4 +96,36 @@ function versionSort(versionList) {
   return versionList;
 }
 
+function versionSort2(versionList) {
+  const maxLength = Math.max(
+    ...versionList.map((item) => item.split(".").length)
+  );
+
+  return versionList.sort((a, b) => {
+    const arr1 = a.split(".");
+    const arr2 = b.split(".");
+
+    function merge(arr) {
+      let step = maxLength - arr.length;
+      while (step) {
+        arr.unshift("0");
+        step -= 1;
+      }
+    }
+
+    merge(arr1);
+    merge(arr2);
+
+    let i = 0;
+    while (true) {
+      const s1 = arr1[i];
+      const s2 = arr2[i++];
+
+      if (s1 === s2) continue;
+
+      return s1 - s2;
+    }
+  });
+}
+
 console.log("versionList: ", versionSort(versionList));

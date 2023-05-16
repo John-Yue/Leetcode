@@ -15,3 +15,17 @@ Promise.retry = function (promiseFn, times = 3) {
     }
   });
 };
+
+Promise.retry = function(promiseFn, times == 3) {
+  return new Promise(async( resolve, reject) => {
+    while(times--) {
+      try{
+        let res = await promiseFn();
+        resolve(res);
+        break;
+      } catch (err) {
+        if(!times) reject(err);
+      }
+    }
+  });
+}
